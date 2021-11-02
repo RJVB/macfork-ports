@@ -5,7 +5,7 @@ PortSystem          1.0
 PortGroup           cargo   1.0
 PortGroup           github  1.0
 
-github.setup        Canop broot 1.6.4 v
+github.setup        Canop broot 1.7.0 v
 github.tarball_from archive
 revision            1
 
@@ -26,11 +26,13 @@ maintainers         {gmail.com:herby.gillot @herbygillot} \
 platforms           darwin
 
 checksums           ${distname}${extract.suffix} \
-                    rmd160  d5827fbaa35e3520879885709660bf3289e52ca8 \
-                    sha256  609bd9e6c7fea85b68586435280b37cb90c2af3cb0a3f63a5a37dfdcc822fdc7 \
-                    size    8711244
+                    rmd160  6b44026219e49ef79d6721b10c46591ba0b42be7 \
+                    sha256  0ebfd2cbe36ffa461a765af06598ec47650488ec562963c869443e8e7ef2d21b \
+                    size    8714656
 
-depends_lib-append  port:libgit2
+depends_lib-append  port:libgit2 \
+                    port:xorg-libxcb \
+                    port:zlib
 
 destroot {
     xinstall -m 755 \
@@ -121,8 +123,8 @@ cargo.crates \
     itoa                             0.4.7  dd25036021b0de88a0aff6b850051563c6516d0bf53f8638938edbb9de732736 \
     jobserver                       0.1.22  972f5ae5d1cb9c6ae417789196c803205313edde988685da5e3aae0827b9e7fd \
     jpeg-decoder                    0.1.22  229d53d58899083193af11e15917b5640cd40b29ff475a1fe4ef725deb02d0f2 \
-    lazy-regex                       2.2.1  17d198f91272f6e788a5c0bd5d741cf778da4e5bc761ec67b32d5d3b0db34a54 \
-    lazy-regex-proc_macros           2.2.1  6c12938b1b92cf5be22940527e15b79fd0c7e706e34bc70816f6a72b3484f84e \
+    lazy-regex                       2.2.2  919a16773ebf2de27e95fc58460110932e55bb0780e23aa51fa5a6b59c9e2b3d \
+    lazy-regex-proc_macros           2.2.2  5fbe6bf0a04af51c07976625d5007e75ed9b8b955befc21c77b3947733496e36 \
     lazy_static                      1.4.0  e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646 \
     lazycell                         1.3.0  830d08ce1d1d941e6b30645f1a0eb5643013d835ce3779a5fc208261dbe10f55 \
     lfs-core                         0.4.2  ddf01952bd55b12b51fcd9eba796443b2009ce83d55a1eed3fa13c2f635c232c \
@@ -139,7 +141,7 @@ cargo.crates \
     memmap                           0.7.0  6585fd95e7bb50d6cc31e20d4cf9afb4e2ba16c5846fc76793f11218da9c475b \
     memoffset                        0.6.4  59accc507f1338036a0477ef61afdae33cde60840f4dfe481319ce3ad116ddf9 \
     minimad                          0.7.1  c6176dd156ab0154ee95322efe2da93796cc338a8a63a6338d64c79419bcbe13 \
-    minimad                          0.8.0  8957f240ecb82a4e699bcf4db189fe8a7f5aa68b9e6d5abf829c62a9ee4630ed \
+    minimad                          0.9.0  cd37b2e65fbd459544194d8f52ed84027e031684335a062c708774c09d172b0b \
     miniz_oxide                      0.3.7  791daaae1ed6889560f8c4359194f56648355540573244a5448a83ba1ecc7435 \
     miniz_oxide                      0.4.4  a92518e98c078586bc6c934028adcca4c92a53d6a958196de835170a01d84e4b \
     mio                             0.7.13  8c2bdb6314ec10835cd3293dd268473a835c02b7b352e788be788b3c6ca6bb16 \
@@ -170,6 +172,7 @@ cargo.crates \
     proc-macro-hack                 0.5.19  dbf0c48bc1d91375ae5c3cd81e3722dff1abcf81a30960240640d223f59fe0e5 \
     proc-macro2                     1.0.28  5c7ed8b8c7b886ea3ed7dde405212185f423ab44682667c8c6dd14aa1d9f6612 \
     proc-status                      0.1.1  f0e0c0ac915e7b76b47850ba4ffc377abde6c6ff9eeace61d0a89623db449712 \
+    quick-xml                       0.22.0  8533f14c8382aaad0d592c812ac3b826162128b65662331e1127b45c3d18536b \
     quote                            1.0.9  c3d0b9745dc2debf507c8422de05d7226cc1f0644216dfdfead988f9b1ab32a7 \
     rand                             0.8.4  2e7573632e6454cf6b99d7aac4ccca54be06da05aca2ef7423d22d27d4d4bcd8 \
     rand_chacha                      0.3.1  e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88 \
@@ -208,8 +211,8 @@ cargo.crates \
     syntect                          4.6.0  8b20815bbe80ee0be06e6957450a841185fcf690fe0178f14d77a05ce2caa031 \
     tempfile                         3.2.0  dac1c663cfc93810f88aed9b8941d48cabf856a1b111c29a40439018d870eb22 \
     termimad                        0.10.3  1a0cc62bee46f8532b579609b5b2ad3f9dc8e9f952dc783c7c882eed0c5ed785 \
-    termimad                        0.16.1  67850c570d42f8c4c05b610820a3c378584be68d022873f2b927cddd74c00138 \
-    terminal-clipboard               0.2.1  17a6b9bf0e5a40b6955cf6f384df9b7ed54106ff57b721f88614f30013d5ef5a \
+    termimad                        0.17.0  65099744de84765fa303b9dbf5fe7756844c2b5ffdaa571609220f271e90d747 \
+    terminal-clipboard               0.3.0  e2f39144c8166526298d0d398008de92ab16be2ef8ba0a299a173b9cfe20579c \
     termux-clipboard                 0.1.0  9f6aff13ca3293315b94f6dbd9c69e1c958fe421c294681e2ffda80c9858e36f \
     textwrap                        0.11.0  d326610f408c7a4eb6f51c37c330e496b08506c9457c9d34287ecc38809fb060 \
     thiserror                       1.0.26  93119e4feac1cbe6c798c34d3a53ea0026b0b1de6a120deef895137c0529bfe2 \
@@ -237,7 +240,7 @@ cargo.crates \
     winapi-i686-pc-windows-gnu       0.4.0  ac3b87c63620426dd9b991e5ce0329eff545bccbbb34f3be09ff6fb6ab51b7b6 \
     winapi-util                      0.1.5  70ec6ce85bb158151cae5e5c87f95a8e97d2c0c4b001223f33a334e3ce5de178 \
     winapi-x86_64-pc-windows-gnu     0.4.0  712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f \
-    x11-clipboard                    0.5.2  b397ace6e980510de59a4fe3d4c758dffab231d6d747ce9fa1aba6b6035d5f32 \
-    xcb                              0.9.0  62056f63138b39116f82a540c983cc11f1c90cd70b3d492a70c25eaa50bd22a6 \
+    x11-clipboard                    0.5.3  473068b7b80ac86a18328824f1054e5e007898c47b5bbc281bd7abe32bc3653c \
+    xcb                             0.10.1  771e2b996df720cd1c6dd9ff90f62d91698fd3610cc078388d0564bdd6622a9c \
     xml-rs                           0.8.4  d2d7d3948613f75c98fd9328cfdcc45acc4d360655289d0a7d4ec931392200a3 \
     yaml-rust                        0.4.5  56c1936c4cc7a1c9ab21a1ebb602eb942ba868cbd44a99cb7cdc5892335e1c85

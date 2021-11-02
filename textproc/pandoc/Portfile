@@ -5,12 +5,12 @@ PortGroup           github 1.0
 PortGroup           compiler_blacklist_versions 1.0
 PortGroup           haskell_stack 1.0
 
-github.setup        jgm pandoc 2.14.2
+github.setup        jgm pandoc 2.16
 revision            0
 categories          textproc haskell
 platforms           darwin
 license             GPL-3
-maintainers         nomaintainer
+maintainers         {judaew @judaew} openmaintainer
 
 description         Conversion between markup formats
 
@@ -28,9 +28,9 @@ long_description    Pandoc is a Haskell library for converting from \
 
 homepage            https://pandoc.org
 
-checksums           rmd160  b5480da275d14ee4d650438e94f8c978b3faa26b \
-                    sha256  1fd0fd58308345783d6fbbb1000c4b61a3a8dbf79405c209456d6289e1f3decd \
-                    size    6231975
+checksums           rmd160  84d6c34a767bc68e85cf4b4dd86968e199e4654d \
+                    sha256  999f2b83353f09cd6b55ff2c711c282e8b389841b55935acd97908d1ba32c641 \
+                    size    7182358
 
 configure.ccache    no
 

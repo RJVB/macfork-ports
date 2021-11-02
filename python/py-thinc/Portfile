@@ -7,13 +7,13 @@ PortGroup           compiler_blacklist_versions 1.0
 
 name                py-thinc
 # Don't upgrade past py-spaCy's highest supported version (currently 8.1.0).
-version             8.0.10
+version             8.0.12
 revision            0
 github.setup        explosion thinc ${version} v
 
-checksums           rmd160  c81325ad5d701bc47c7bce3e0479c2eb5440ec90 \
-                    sha256  202860d105da3d649750b0edc070bdb11a65da42cb9eaa9b03dd816ca9746930 \
-                    size    1337103
+checksums           rmd160  edcd3db8b6672d7b51b7b62633ed35444543b968 \
+                    sha256  ddda400b26e40f3e9425b647374c9a8b302cb24ba1537b7aa37d58acf794cdb0 \
+                    size    1423521
 
 platforms           darwin
 supported_archs     x86_64

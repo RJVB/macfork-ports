@@ -11,7 +11,7 @@ platforms           darwin
 license             MIT
 
 # keep version for PY27 and PY34, these are (indirect) dependencies of py-virtualenv
-python.versions     27 34 35 36 37 38 39
+python.versions     27 34 35 36 37 38 39 310
 
 maintainers         {stromnov @stromnov} openmaintainer
 
@@ -41,10 +41,6 @@ if {${name} ne ${subport}} {
         if {${python.version} < 34} {
             depends_lib-append  port:py${python.version}-contextlib2
         }
-    } else {
-        depends_build-append \
-                            port:py${python.version}-toml
-
     }
 
     livecheck.type      none

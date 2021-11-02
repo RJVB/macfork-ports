@@ -3,7 +3,7 @@
 PortSystem          1.0
 
 name                npm8
-version             8.1.0
+version             8.1.2
 revision            0
 categories          devel
 platforms           darwin
@@ -27,10 +27,10 @@ extract.suffix      .tgz
 
 # Please keep the sha1 - users can use it to validate sha values
 # published on npmjs.org for the package
-checksums           rmd160  a169453c06bd87d717e4e50ddb2dd7363db60788 \
-                    sha1    2b4a44f00cab4ae7e8fb2d8180f2af92e1098b09 \
-                    sha256  301ddf6bdbd6f6abb36de144902914c6bb4d6f7463758774fdd0a9ee7c597d34 \
-                    size    2234592
+checksums           rmd160  41dea58359be31a47a780e7758ab029966dc0556 \
+                    sha1    d273423f06113f2fa95319e24438ec0cc20358d9 \
+                    sha256  fd2ae0667209ab7110804be2009cfe59997e90c9e18545189e61552861661cfe \
+                    size    2223610
 
 worksrcdir          "package"
 
